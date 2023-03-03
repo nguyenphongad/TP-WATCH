@@ -83,6 +83,4 @@ function Header_menu() {
     menu.insertAdjacentHTML("beforeend", template)
 }
 
-
-
 export default Header_menu;

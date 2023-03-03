@@ -5,9 +5,10 @@
 body{
     margin: 0px;
 }
+
+/* header menu */
 .container_menu{
     width: 100%;
-    /* background-color: #302d2d; */
     background-color: #ffffff00;
     position: fixed;
     z-index: 1;
@@ -86,8 +87,6 @@ body{
     display: flex;
     justify-content: right;
 }
-
-
 .container_menu .wrap_menu .line-row .box-control .btn_cart{
     display: flex;
     align-items: center;
@@ -121,10 +120,7 @@ body{
 
 
 
-
-
 /* trang chu */
-
 .body_content{
     width: 100%;
 }
@@ -137,3 +133,4 @@ body{
 .body_content .wrap_content .front-video-intro video{
     width: 100%;
 }
+
