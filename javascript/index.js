@@ -1,4 +1,3 @@
-
 // add title website
 const link_css = document.createElement("link")
 link_css.rel = "shortcut icon"
