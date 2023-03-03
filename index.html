@@ -1,29 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP-WATCH | Phân phối đồng hồ chính hãng</title>
+    <title>Trang chủ | TP-WATCH - Phân phối đồng hồ chính hãng</title>
 </head>
 
 <body>
     <div class="container">
         <div id="menu"></div>
-        <script type="module" src="./javascript/index.js"></script>
+        <script type="module" src="./javascript/header-menu.js"></script>
+
         <div class="body_content">
             <div class="wrap_content">
                 <div class="front-video-intro">
-                    <video
-                    id="id_front_video_intro" 
-                    controls
-                    loop
-                    >
+                    <video id="id_front_video_intro" loop muted>
                         <source src="./video/video.webm">
                     </video>
+                    <div class="show_line_product-top">
+                        <div class="homepage_push-content">
+                            <h1>
+                                SẢN PHẨM CHÍNH HÃNG - LÃI SUẤT TRẢ GÓP THẤP
+                            </h1>
+                            <div class="line_btn">
+                                <a href="#">
+                                    Sản phẩm nổi bật
+                                </a>
+                                <a href="#">
+                                    Đồng hồ phái nam
+                                </a>
+                            </div>
+                            <div class="toggle_mute_video">
+                                <button id="toggle_muted_video">
+                                    <i class="fa-light fa-volume-slash" id="icon_muted"></i>
+                                </button>
+                            </div>
+                            <div class="line_arrow-down">
+                                <div class="border_icon_down">
+                                    <i class="fa-thin fa-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <script src="./javascript/home.js"></script>
         </div>
     </div>
 
