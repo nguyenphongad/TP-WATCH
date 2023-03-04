@@ -78,6 +78,38 @@ body {
     margin-bottom: 10px;
 }
 
+.wrap_menu-left {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100%;
+    left: 0px;
+    background-color: #ffffffe7;
+    z-index: 4;
+    transition: all 0.3s;
+}
+
+.wrap_menu-left .box_contask_menu {
+    width: 100%;
+    height: 100%;
+    background: #00000042;
+    overflow-y: scroll;
+    padding-top: 100px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.show_menu_left {
+    top: 0px;
+}
+
+.scroll_hidden_body {
+    overflow: hidden;
+}
+
+
+
+
 
 
 .container_menu .wrap_menu .line-row .hanle_menu .btn_search {
@@ -151,22 +183,52 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* trang chu */
 .body_content {
     width: 100%;
+    overflow: hidden;
 }
 
 .body_content .wrap_content {
     width: 100%;
 }
 
+
 .wrap_content .front-video-intro {
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .wrap_content .front-video-intro video {
     width: 100%;
+    transition: all 0.3s;
+    transform: scale(1.2);
+}
+
+.active_menu_trans_video {
+    transform: scale(1) !important;
 }
 
 .front-video-intro .show_line_product-top {
@@ -236,7 +298,7 @@ body {
 
 .show_line_product-top .homepage_push-content .line_arrow-down {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -245,11 +307,31 @@ body {
 .show_line_product-top .homepage_push-content .border_icon_down {
     width: 30px;
     font-size: 40px;
-    transition: all 0.5s;
     cursor: pointer;
+    animation: bounce 1s infinite;
 }
 
-.show_line_product-top .homepage_push-content .border_icon_down:hover {
-    width: 30px;
-    transform: translateY(20px);
+@keyframes bounce {
+
+    0%,
+    to {
+        transform: translateY(-30px);
+        -webkit-animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+        animation-timing-function: cubic-bezier(.8, 0, 1, 1)
+    }
+
+    50% {
+        transform: none;
+        -webkit-animation-timing-function: cubic-bezier(0, 0, .2, 1);
+        animation-timing-function: cubic-bezier(0, 0, .2, 1)
+    }
+}
+
+.box-slide {
+    width: 100%;
+    margin-top: -5px;
+}
+
+.box-slide img {
+    width: 100%;
 }

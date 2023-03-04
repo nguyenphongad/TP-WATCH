@@ -1,9 +1,9 @@
 
 const get_video_intro = document.getElementById("id_front_video_intro")
-get_video_intro.play()
+get_video_intro.play();
+get_video_intro.muted = true;
 
 const handle_toggle_muted_video = document.getElementById("toggle_muted_video")
-
 
 handle_toggle_muted_video.addEventListener("click", function () {
     const icon_volume_muted = document.getElementById("icon_muted")
@@ -19,4 +19,3 @@ handle_toggle_muted_video.addEventListener("click", function () {
     }
 })
 
-document.getElementById("id_front_video_intro").muted = true
