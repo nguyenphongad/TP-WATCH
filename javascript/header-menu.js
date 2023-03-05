@@ -25,8 +25,6 @@ function Header_menu() {
                             </div>
                         </button>
 
-                        
-
                         <button class="btn_search set_active_scroll_header active_scroll_header">
                             <i class="fa-light fa-magnifying-glass"></i>
                             <div>TÌM KIẾM</div>
