@@ -72,14 +72,27 @@ function Header_menu() {
                 <div class="box__flex-menu show__collection-product">
                     <div class="heading__text--product">SẢN PHẨM</div>
                     <div class="wrap__box__overflow">
-                        <a href="#">sp1</a>
-                        <a href="#">sp2</a>
+                        <a href="#">ĐỒNG HỒ LOBINNI</a>
+                        <a href="#">ĐỒNG HỒ I&W CARNIVAL</a>
+                        <a href="#">ĐỒNG HỒ CARNIVAL</a>
+                        <a href="#">ĐỒNG HỒ TEINTOP</a>
+                        <a href="#">ĐỒNG HỒ BORMAN</a>
+                        <a href="#">ĐỒNG HỒ AOUKE</a>
+                        <a href="#">ĐỒNG HỒ MINI FOCUS</a>
+                        <a href="#">ĐỒNG HỒ NAM</a>
+                        <a href="#">ĐỒNG HỒ NỮ</a>
+                        <a href="#">ĐỒNG HỒ ĐÔI</a>
+                        <a href="#">ĐỒNG HỒ DÂY DA</a>
+                        <a href="#">ĐỒNG HỒ DÂY THÉP</a>
+                        <a href="#">ĐỒNG HỒ DÂY CƠ</a>
+                        <a href="#">ĐỒNG HỒ DÂY PIN</a>
+                        <a href="#">ĐỒNG HỒ DÂY HỒ</a>
                     </div>
                 </div>
             </div>
             <div class="line__handle__close--menu">
                 <button id="id_btn_handle_close_menu">
-                    <i class="fa-light fa-xmark"></i>
+                    <i class="fa-light fa-chevron-up"></i>
                 </button>
             </div>
         </div>
