@@ -1,1 +1,2 @@
+truy cập open folder website
 cần phải cài extentions LIVE SERVER trong visual studio code mới chạy được

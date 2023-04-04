@@ -1,3 +1,4 @@
+
 function Header_menu() {
     const menu = document.getElementById("menu");
 
@@ -42,6 +43,7 @@ function Header_menu() {
                             <a href="#cart" class="set_active_scroll_header active_scroll_header">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <div>GIỎ HÀNG</div>
+                                <div class="number_list-cart">0</div>
                             </a>
                         </div>
 
@@ -58,14 +60,39 @@ function Header_menu() {
 
         <div class="wrap_menu-left" id="wrap_menu_left">
             <div class="box_contask_menu">
-                <h1>MENU</h1>
+                <div class="box__flex-menu">
+                    <div class="wrap__line--option">
+                        <a href="/">TRANG CHỦ</a>
+                        <a href="#">GIỚI THIỆU</a>
+                        <a href="#">THANH TOÁN</a>
+                        <a href="#">LIÊN HỆ</a>
+                        <a href="#">TIN TỨC</a>
+                    </div>
+                </div>
+                <div class="box__flex-menu show__collection-product">
+                    <div class="heading__text--product">SẢN PHẨM</div>
+                    <div class="wrap__box__overflow">
+                        <a href="#">sp1</a>
+                        <a href="#">sp2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="line__handle__close--menu">
+                <button id="id_btn_handle_close_menu">
+                    <i class="fa-light fa-xmark"></i>
+                </button>
             </div>
         </div>
+        
+        <div class="wrap__animation_logo-trans-y remove__hide-wrap_ans_logo-trans" id="id_wrapper__ans_logo-trans-y">
+            <img src="./logo/logo_white.png" alt="logo_white">
+        </div>  
         
         
         `;
 
     menu.insertAdjacentHTML("beforeend", template);
+
     const set_image_logo = document.getElementById("id_logo_header");
     const get_ctn_menu = document.getElementById("id_container_menu");
     const get_change_color_scroll = document.querySelectorAll(".set_active_scroll_header");
@@ -76,13 +103,25 @@ function Header_menu() {
 
     const get_video_trans = document.getElementById("id_front_video_intro")
 
+    const get_wrapper_an_trans_y = document.getElementById("id_wrapper__ans_logo-trans-y")
+
+    const get_btn_handle_close_menu = document.getElementById("id_btn_handle_close_menu")
+
+    get_btn_handle_close_menu.addEventListener("click", function () {
+        get_menu_left.classList.remove("show_menu_left")
+
+        document.body.classList.remove("scroll_hidden_body")
+
+        get_video_trans.classList.remove("active_menu_trans_video")
+    })
+
     handle_open_menu_left.addEventListener("click", function () {
         get_menu_left.classList.toggle("show_menu_left")
 
         document.body.classList.toggle("scroll_hidden_body")
 
         get_video_trans.classList.toggle("active_menu_trans_video")
-
+        
 
         get_ctn_menu.classList.add("active_scroll_menu")
         set_image_logo.setAttribute("src", "./logo/logo_black.png")
@@ -91,14 +130,27 @@ function Header_menu() {
         })
     })
 
-
-
     if (get_location_pathName === "/" || get_location_pathName === "/index.html") {
         get_ctn_menu.classList.remove("active_scroll_menu")
         set_image_logo.setAttribute("src", "./logo/logo_white.png")
         get_change_color_scroll.forEach(function (indexEl) {
             indexEl.classList.remove("active_scroll_header")
         })
+
+        document.body.classList.add("scroll_hidden_body");
+        get_wrapper_an_trans_y.classList.remove("remove__hide-wrap_ans_logo-trans");
+        set_image_logo.classList.add("visibility-hidden");
+        document.body.style.paddingRight = "4px";
+
+        setTimeout(() => {
+            document.body.classList.remove("scroll_hidden_body");
+            document.body.style.paddingRight = "0px";
+            set_image_logo.classList.remove("visibility-hidden")
+            get_wrapper_an_trans_y.classList.add("remove__hide-wrap_ans_logo-trans");
+        }, 
+        // 3150)
+        0)
+
 
         window.addEventListener("scroll", function () {
             const scroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -120,6 +172,7 @@ function Header_menu() {
 
         })
     }
+
 }
 
 Header_menu();

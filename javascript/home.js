@@ -3,6 +3,10 @@ const get_video_intro = document.getElementById("id_front_video_intro")
 get_video_intro.play();
 get_video_intro.muted = true;
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 const handle_toggle_muted_video = document.getElementById("toggle_muted_video")
 
 handle_toggle_muted_video.addEventListener("click", function () {

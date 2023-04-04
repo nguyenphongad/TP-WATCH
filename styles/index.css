@@ -24,6 +24,14 @@ body {
     border-radius: 0px;
 }
 
+.display-block {
+    display: block;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
 /* header menu */
 .container_menu {
     width: 100%;
@@ -33,8 +41,8 @@ body {
     top: 0px;
     transition: all 0.5s;
     padding: 10px 25px;
-    background-color: #14141402;
-    background-image: linear-gradient(180deg, #0000006c 10%, transparent);
+    background-color: #29292902;
+    background-image: linear-gradient(180deg, #0000003b 10%, transparent);
 }
 
 .active_scroll_menu {
@@ -87,30 +95,94 @@ body {
     position: fixed;
     top: -100%;
     left: 0px;
-    background-color: #ffffffe7;
+    /* background-color: #fffffff5; */
+    /* background-color: #000000f5; */
+    background-color: #ffffff;
     z-index: 4;
     transition: all 0.3s;
+    opacity: 0;
 }
 
 .wrap_menu-left .box_contask_menu {
     width: 100%;
-    height: 100%;
-    background: #00000042;
-    overflow-y: scroll;
-    padding-top: 100px;
+    height: 88%;
+    padding-top: 80px;
     text-align: center;
     color: #ffffff;
+    display: flex;
 }
+
+.wrap_menu-left .box_contask_menu .box__flex-menu {
+    width: 100%;
+}
+
+.box__flex-menu .wrap__line--option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 100px;
+}
+
+.box__flex-menu .wrap__line--option>a {
+    margin: 25px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #d85600;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+
+.box__flex-menu .wrap__line--option>a:hover {
+    transform: translateX(15px);
+}
+
+
+.wrap_menu-left .line__handle__close--menu {
+    text-align: center;
+}
+
+.line__handle__close--menu button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #afafaf;
+    color: #e4e4e4;
+}
+
+.show__collection-product {
+    padding: 35px 0px;
+}
+
+.show__collection-product .heading__text--product {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.show__collection-product .wrap__box__overflow {
+    text-align: left;
+    padding: 30px 80px;
+}
+
+.show__collection-product .wrap__box__overflow a {
+    margin: 10px 0px;
+    display: block;
+}
+
+
+
 
 .show_menu_left {
     top: 0px;
+    opacity: 1;
 }
 
 .scroll_hidden_body {
     overflow: hidden;
 }
-
-
 
 
 
@@ -158,6 +230,21 @@ body {
     text-decoration: none;
     text-align: center;
     color: #ffffff;
+    position: relative;
+}
+
+.container_menu .wrap_menu .line-row .box-control .btn_cart .number_list-cart {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #b60000;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }
 
 .container_menu .wrap_menu .line-row .box-control .btn_cart i {
@@ -330,11 +417,84 @@ body {
     }
 }
 
-.box-slide {
+/* .box-slide {
     width: 100%;
     margin-top: -5px;
 }
 
 .box-slide img {
     width: 100%;
+} */
+.box__brand--pView{
+    position: relative;
+}
+.box__brand--pView .wrap__brand--pView{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrap__animation_logo-trans-y {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    background-color: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: an_wrap_opacity 1s forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes an_wrap_opacity {
+    from {
+        background-color: #141414;
+    }
+
+    to {
+        background-color: #14141413;
+        transition: all 0.5s;
+    }
+}
+
+.wrap__animation_logo-trans-y img {
+    width: 300px;
+    animation: an_img_logo_wrap 1s forwards;
+    position: fixed;
+    animation-delay: 2s;
+}
+
+@keyframes an_img_logo_wrap {
+    from {
+        top: 50%;
+    }
+
+    to {
+        width: 180px;
+        top: 10px;
+    }
+}
+
+.remove__hide-wrap_ans_logo-trans {
+    display: none;
 }
