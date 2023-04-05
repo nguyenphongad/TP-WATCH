@@ -175,6 +175,12 @@ body {
     text-decoration: none;
     color: #d85600;
     font-weight: 600;
+    font-size: 20px;
+    transition: all 0.4s;
+}
+
+.show__collection-product .wrap__box__overflow a:hover {
+    transform: translateX(10px);
 }
 
 
@@ -242,7 +248,7 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    background-color: #b60000;
+    background-color: #da0000b6;
     position: absolute;
     top: -10px;
     right: -10px;
